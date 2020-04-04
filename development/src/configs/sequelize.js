@@ -47,6 +47,16 @@ module.exports = {
     logging: process.env.TEST_DB_LOGGING === 'true'
   },
   production: {
+    replivation: {
+      read: [
+        {
+          host: process.env.PROD_DB_HOST_SLV
+        }
+      ],
+      write: {
+        host: process.env.PROD_DB_HOST_MST
+      }
+    },
     username: process.env.PROD_DB_USER,
     password: process.env.PROD_DB_PW,
     database: process.env.PROD_DB,
