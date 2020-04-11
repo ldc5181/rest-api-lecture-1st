@@ -27,7 +27,7 @@ module.exports = {
           repo: 'git@github.com:ldc5181/rest-api-lecture-1st.git',
           path: '/home/ubuntu/lecture/development',
           'post-deploy':
-          'npm i && npm run build && cd /home/ubuntu/lecture/production && npm i --only=production && pm2 reload ecosystem.config.js --env production'
+          'npm i && npm run build && cd /home/ubuntu/lecture/production && npm i --only=production && ~/.npm-global/bin/pm2 reload all'
         }
       }
   }
